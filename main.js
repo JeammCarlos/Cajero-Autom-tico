@@ -23,7 +23,7 @@ function validateUser() {
 }
 
 function checkBalance() {
-    document.getElementById("output").innerHTML = `Saldo actual: $${selectedAccount.saldo}`;
+    document.getElementById("output").innerHTML = `Saldo actual actual: $${selectedAccount.saldo}`;
 }
 
 function deposit() {
@@ -40,7 +40,7 @@ function deposit() {
         alert(`No puedes tener más de $990. El monto máximo permitido es $${990 - amount}.`);
         selectedAccount.saldo -= amount;
     } else {
-        document.getElementById("output").innerHTML = `Monto ingresado: $${amount}<br>Saldo total: $${selectedAccount.saldo}`;
+        document.getElementById("output").innerHTML = `Monto ingresado: $${amount}<br>Saldo total actual: $${selectedAccount.saldo}`;
     }
 }
 
@@ -56,6 +56,6 @@ function withdraw() {
         alert("No puedes dejar menos de $10 en la cuenta.");
     } else {
         selectedAccount.saldo -= amount;
-        document.getElementById("output").innerHTML = `Monto retirado: $${amount}<br>Saldo total: $${selectedAccount.saldo}`;
+        document.getElementById("output").innerHTML = `Monto retirado: $${amount}<br>Saldo total actual: $${selectedAccount.saldo}`;
     }
 }
